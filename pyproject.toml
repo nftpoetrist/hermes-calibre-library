@@ -1,0 +1,8 @@
+[project]
+name = "hermes-calibre-library"
+version = "0.1.0"
+description = "Hermes Agent plugin: search calibre e-book libraries and read their EPUB and TXT books"
+requires-python = ">=3.11"
+license = "MIT"
+# Standard library only (sqlite3, zipfile, xml.etree, html.parser).
+dependencies = []

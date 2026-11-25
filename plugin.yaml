@@ -1,0 +1,25 @@
+name: calibre-library
+version: 0.1.0
+manifest_version: 2
+api_version: 1
+description: Search your calibre e-book libraries and read their EPUB and TXT books, read-only and offline
+author: nftpoetrist
+license: MIT
+homepage: https://github.com/nftpoetrist/hermes-calibre-library
+tags: [calibre, ebooks, epub, library, offline]
+requires_hermes: ">=0.23.4"
+provides_tools:
+  - calibre_search
+  - calibre_book
+  - calibre_read
+config_schema:
+  paths:
+    type: list
+    default: []
+    description: >-
+      calibre library folders (each one holds a metadata.db). Each library's id is its folder
+      name, for example Calibre_Library for "Calibre Library".
+  max_chars:
+    type: int
+    default: 12000
+    description: Characters of book text calibre_read returns per call (1000-100000); longer books are read in parts.
